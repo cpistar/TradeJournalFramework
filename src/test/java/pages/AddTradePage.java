@@ -50,6 +50,13 @@ public class AddTradePage {
 	
 	@FindBy(id="exit")
 	public WebElement Exit;
+	
+	@FindBy(css = ".btn-info")
+	public WebElement saveButton;
+	
+	/*@FindBy (xpath = "//td[contains(text(),'$175.21')]")
+	public WebElement savedInDB;*/
+	
 
 }
 

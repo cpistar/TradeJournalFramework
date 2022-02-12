@@ -15,3 +15,13 @@ import io.cucumber.junit.CucumberOptions;
 public class TestRunner {
 
 }
+/*
+ * In the top right corner of any page, click your username.
+On your profile page, click the Repositories tab, then click the name of your repository.
+In your repository's right sidebar, click Settings.
+Click the "Collaborators" tab.
+Start typing the collaborator's username.
+Select the user from the drop-down menu.
+Click Add.
+ * */
+ 

@@ -73,9 +73,40 @@ public class AddTradeFunctionality {
 		addtrade.Exit.sendKeys(String.valueOf(exitPrice));
 	   
 	}
-
-
 	
 
+//vaild tests start
+	
+	@When("I click the By  to Open")
+	public void i_click_the_by_to_open() {
+	   addtrade.bto.click();
+	}
+	@Then("I enter {string} to then symbol textbox")
+	public void i_enter_to_then_symbol_textbox(String validStockName) {
+	    addtrade.Symbol.sendKeys(validStockName);
+	}
+	@When("I enter a valid date {string} to open date picker")
+	public void i_enter_a_valid_date_to_open_date_picker(String validDate) {
+		utils.clearValueOnTheField(addtrade.OpenDate);
+		addtrade.OpenDate.sendKeys(validDate);
+	}
+	@When("I enter a valid {double} number in the entry price box")
+	public void i_enter_a_valid_number_in_the_entry_price_box(Double validEntryPrice) {
+		addtrade.Entry.sendKeys(String.valueOf(validEntryPrice)); 
+	}
+	@Then("I enter a valid date{string} to close date picker")
+	public void i_enter_a_valid_date_to_close_date_picker(String validDate) {
+	    utils.clearValueOnTheField(addtrade.CloseDate);
+		addtrade.CloseDate.sendKeys(validDate);
+	}
+	@Then("I enter avalid {double} number in the exit price box")
+	public void i_enter_avalid_number_in_the_exit_price_box(Double validClosePrice) {
+		addtrade.Exit.sendKeys(String.valueOf(validClosePrice)); 
+	}
+	@Then("I click the Save button")
+	public void i_click_the_save_button() {
+	  addtrade.saveButton.click();
+	}
+//Valid tests end
 }
 
