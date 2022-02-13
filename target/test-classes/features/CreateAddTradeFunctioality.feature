@@ -31,3 +31,4 @@ Feature: Create Add a Trade Funcationality
     Then I enter a valid date"02/25/2022" to close date picker
     And I enter avalid 175.15 number in the exit price box
     Then I click the Save button
+    Then The trade is displayed on the trade table

@@ -1,6 +1,7 @@
 package step_definitions;
 
 import org.junit.Assert;
+import org.openqa.selenium.WebElement;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -13,6 +14,8 @@ import utilities.PropertiesReader;
 public class AddTradeFunctionality {
 	AddTradePage addtrade = new AddTradePage();
 	BrowserUtils utils = new BrowserUtils();
+	
+	String stockSymbol;
 	
 	@Given("I am on the login page")
 	public void i_am_on_the_login_page() {
@@ -83,6 +86,7 @@ public class AddTradeFunctionality {
 	}
 	@Then("I enter {string} to then symbol textbox")
 	public void i_enter_to_then_symbol_textbox(String validStockName) {
+		stockSymbol=validStockName;
 	    addtrade.Symbol.sendKeys(validStockName);
 	}
 	@When("I enter a valid date {string} to open date picker")
@@ -106,6 +110,18 @@ public class AddTradeFunctionality {
 	@Then("I click the Save button")
 	public void i_click_the_save_button() {
 	  addtrade.saveButton.click();
+	}
+	@Then("The trade is displayed on the trade table")
+	public void the_trade_is_displayed_on_the_trade_table() {
+		Assert.assertTrue(addtrade.addTrade.isDisplayed());
+		
+		for (WebElement singleSymbol : addtrade.stockSymbols) {
+			if(singleSymbol.getText().equals(singleSymbol))
+				Assert.assertEquals(singleSymbol.getText(), stockSymbol);
+			
+			
+		}
+	  
 	}
 //Valid tests end
 }

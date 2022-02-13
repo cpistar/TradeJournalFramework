@@ -1,5 +1,7 @@
 package pages;
 
+import java.util.List;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -54,8 +56,14 @@ public class AddTradePage {
 	@FindBy(css = ".btn-info")
 	public WebElement saveButton;
 	
-	/*@FindBy (xpath = "//td[contains(text(),'$175.21')]")
-	public WebElement savedInDB;*/
+	@FindBy(xpath="//a[contains(text(),\"Add trade\")]")
+	public WebElement addTrade;
+	
+	@FindBy(xpath = "//table[@class ='table table-bordered table-striped']/tbody/tr/td[2]")
+	public List<WebElement> stockSymbols;
+	
+	@FindBy(xpath = "//table[@class ='table table-bordered table-striped']/tbody/tr/td[3]")
+	public List<WebElement>stockEntryPrices ;
 	
 
 }
