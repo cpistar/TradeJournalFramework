@@ -32,3 +32,34 @@ Feature: Create Add a Trade Funcationality
     And I enter avalid 175.15 number in the exit price box
     Then I click the Save button
     Then The trade is displayed on the trade table
+    
+    @AddTradeFieldsInvalidTest
+    Scenario: User should be direct to the Save Trade page
+    When I click the drow down box
+    And I click the Sell  to Open
+    Then I enter an emty space "" to then symbol textbox
+    When I enter a  date "05/24/2019" to open date picker
+    And I enter a  "abc"  in the entry price box
+    Then I enter a  date "08/25/2020" to close date picker
+    And I enter "175.15"  number in the exit price box
+    Then I click the stock save button
+    Then The error message "Please fill out this field." shows up
+    
+    @BackToTransactionFunctionality
+    Scenario: User should be direct to the Save Trade page
+    When I click on the Back to Transaction button
+    Then I should be directed to the Home Page
+    And I should see the following data entered in the table
+    |Action|Symbol|Open date|Entry|Close date|Exit|Gain/Loss|
+    And I should see the Action Column with following button
+    |Update|Delete|
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    

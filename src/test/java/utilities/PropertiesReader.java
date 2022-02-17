@@ -9,7 +9,7 @@ public class PropertiesReader {
 
 	static {
 		try {
-			File file = new File("./src/test/resources/env.properties");
+			File file = new File("./src/test/resources/test_data/env.properties");
 			FileInputStream input = new FileInputStream(file);
 
 			config = new Properties();
