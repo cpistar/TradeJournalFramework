@@ -9,7 +9,7 @@ Feature: Create Add a Trade Funcationality
     And I enter the "gulpari" into username box and "SuperGulpari123!" password box
     Then I click the login button
 
-  @AddTradeFields
+  @AddTradeFields @SmokeTests
   Scenario: User should be direct to the Save Trade page
     Then the "save trade" heading should be displayed
     When I click the drow down box
@@ -21,7 +21,7 @@ Feature: Create Add a Trade Funcationality
     Then I enter "09/29/2027" to close date picker
     And I enter a floating point 125.15 number in the exit price box
 
-  @AddTradeFieldsValidTest
+  @AddTradeFieldsValidTest @SmokeTests
   Scenario: User should be direct to the Save Trade page
     When I click the drow down box
     And I click the By  to Open
@@ -33,7 +33,7 @@ Feature: Create Add a Trade Funcationality
     Then I click the Save button
     Then The trade is displayed on the trade table
     
-    @AddTradeFieldsInvalidTest
+    @AddTradeFieldsInvalidTest @SmokeTests
     Scenario: User should be direct to the Save Trade page
     When I click the drow down box
     And I click the Sell  to Open
@@ -45,7 +45,7 @@ Feature: Create Add a Trade Funcationality
     Then I click the stock save button
     Then The error message "Please fill out this field." shows up
     
-    @BackToTransactionFunctionality
+    @BackToTransactionFunctionality @SmokeTests
     Scenario: User should be direct to the Save Trade page
     When I click on the Back to Transaction button
     Then I should be directed to the Home Page
