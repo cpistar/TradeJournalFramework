@@ -10,9 +10,9 @@ import io.cucumber.junit.CucumberOptions;
 		plugin = {"pretty", "html:Reports/htmlReport.html",
 				"json:Reports/jsonReport.json"},
 		features="./src/test/resources/feature",
-		glue="step_definitions",
+		glue="step_definition",
 		dryRun=false,
-		tags="@TradeAppDelete"
+		tags="@TradeJournalDelete"
 		)
 public class Test_runners {
 

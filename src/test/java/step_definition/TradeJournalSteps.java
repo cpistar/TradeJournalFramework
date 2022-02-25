@@ -1,8 +1,9 @@
 package step_definition;
 
 import java.util.List;
-
 import org.junit.Assert;
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Given;
@@ -28,15 +29,15 @@ public class TradeJournalSteps {
 	String password;
 	String confirmBtn;
 	List<String> addTradeData;	
+	
 
 	@Given("I am on Trade Journal login page")
-	public void i_am_on_trade_journal_login_page() {
+	public void i_am_on_trade_journal_log_in_page() {
        Driver.getDriver().get(PropertiesReader.getProperty("TradeJournalUrl"));
        Assert.assertTrue(tradePage.pleaseSignInText.isDisplayed());
 	}
 
-
-	@Given("I enter valid username {string} password {string}")
+	@When("I enter valid username {string} password {string}")
 	public void i_enter_valid_username_password(String string, String string2) {
          tradePage.username.sendKeys(username);
          tradePage.password.sendKeys(password);
@@ -66,6 +67,7 @@ public class TradeJournalSteps {
 	@When("I select symbol {string}")
 	public void i_select_symbol(String United) {
 	    tradePage.stockSymbol.isDisplayed();
+	    tradePage.stockSymbol.clear();
 	}
 	
 	@When("I enter symbo {string} and select entryDate {string} entryPrice {string} exitDate {string} exitPrice {string}")
@@ -100,12 +102,6 @@ public class TradeJournalSteps {
 	}
 	
 	// Delete a trade
-	
-	@Given("I am on the Trade Journal log in page")
-	public void i_am_on_the_trade_journal_log_in_page() {
-	    Driver.getDriver().get(PropertiesReader.getProperty("TradeJournalUrl"));
-	       Assert.assertTrue(tradePage.pleaseSignInText.isDisplayed());
-	}
 
 	@When("I click on delete Trade button")
 	public void i_click_on_delete_trade_button() {
@@ -119,14 +115,14 @@ public class TradeJournalSteps {
 
 	@Then("I click on {string} button")
 	public void i_click_on_button(String string) {
-	   tradePage.confirmBtn.click();
+		utils.alertAccept();
+		utils.waitUntilElementVisible(tradePage.confirmbtn);
 	}
 
 	@Then("The Trade will disappear from the trade table")
 	public void the_trade_will_disappear_from_the_trade_table() {
 	   Assert.assertTrue(tradePage.deleteBtn.isDisplayed());
-	   
-	}
+   	}
 
 	
 }

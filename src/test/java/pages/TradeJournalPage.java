@@ -3,6 +3,7 @@ package pages;
 
 import java.util.List;
 
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -30,7 +31,7 @@ public class TradeJournalPage {
 	@FindBy (xpath="//div[@class='alert alert-danger']")
 	public WebElement errorMessage;
 	
-	@FindBy (xpath="//a[@href='/records/showFormForUpdate?recordId=46135\']")
+	@FindBy (xpath = "//a[contains(text(), 'Update')]")
 	public WebElement updateBtn;
 	
 	@FindBy (xpath = "//p[contains(text(), 'Save Trade')]")
@@ -67,15 +68,13 @@ public class TradeJournalPage {
 	@FindBy (xpath = "//button[text()='Search']")
 	public WebElement searchBtn;
 	
-	@FindBy (id = "Delete")
+	//delete function
+	@FindBy (xpath = "//a[contains(text(), 'Delete')]")
 	public WebElement deleteBtn;
 	
-	@FindBy (xpath="//a[@href='/records/delete?recordId=46463']")
+	@FindBy (xpath="//a[@onclick='return(confirm('Are you sure you want to delete this record?'))']")
 	public WebElement alertMessage;
-	public WebElement confirmBtn;
-	
-	
-	
+	public WebElement confirmbtn;
 	
 	
 }
