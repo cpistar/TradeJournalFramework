@@ -90,10 +90,11 @@ public class AddTradePage {
 	@FindBy(xpath = "//table[@class ='table table-bordered table-striped']/thead/tr/th[7]")
 	public WebElement gainLose;
 
-	@FindBy(xpath = "//a[@href='/records/showFormForUpdate?recordId=45713']")
+	@FindBy(xpath = "//a[contains(text(),'Update')][1]")
 	public WebElement updatebtn;
 
-	@FindBy(xpath = "//a[@href='/records/delete?recordId=45713']")
+	@FindBy(xpath = "//a[contains(text(),'Delete')][1]")
 	public WebElement deletebtn;
 
 }
+////table[@onclick='return (confirm('Are you sure you want to delete this record?'))]/thead/tbody/tr/td[2]

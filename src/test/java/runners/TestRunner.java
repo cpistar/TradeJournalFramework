@@ -10,7 +10,7 @@ import io.cucumber.junit.CucumberOptions;
 		features="./src/test/resources/features",
 		glue="step_definitions",
 		dryRun=false,
-		tags="@AddTradeFieldsInvalidTest "
+		tags="@AddTradeFieldsValidTest "
 		)
 public class TestRunner {
 
