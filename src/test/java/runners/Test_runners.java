@@ -12,7 +12,7 @@ import io.cucumber.junit.CucumberOptions;
 		features="./src/test/resources/feature",
 		glue="step_definition",
 		dryRun=false,
-		tags="@TradeJournalDelete"
+		tags="@TradeJournalUpdate"
 		)
 public class Test_runners {
 

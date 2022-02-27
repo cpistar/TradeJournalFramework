@@ -3,33 +3,59 @@
     "line": 20,
     "elements": [
       {
-        "start_timestamp": "2022-02-24T23:30:23.387Z",
-        "line": 36,
-        "name": "As a user, I want to delete a trade.",
+        "start_timestamp": "2022-02-27T09:39:23.952Z",
+        "before": [
+          {
+            "result": {
+              "duration": 2074842700,
+              "status": "passed"
+            },
+            "match": {
+              "location": "step_definition.Hook.setup()"
+            }
+          }
+        ],
+        "line": 23,
+        "name": "As a user, I want to update a trade",
         "description": "",
-        "id": "as-a-user-i-am-able-to-perform-update-a-trade--delete-a-trade-and-save-a-trade-functionalities.;as-a-user--i-want-to-delete-a-trade.",
+        "id": "as-a-user-i-am-able-to-perform-update-a-trade--delete-a-trade-and-save-a-trade-functionalities.;as-a-user--i-want-to-update-a-trade",
+        "after": [
+          {
+            "result": {
+              "duration": 210232200,
+              "status": "passed"
+            },
+            "match": {
+              "location": "step_definition.Hook.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "status": "undefined"
+              "duration": 1437247800,
+              "status": "passed"
             },
-            "line": 37,
+            "line": 24,
             "name": "I am on the Trade Journal log in page",
-            "match": {},
+            "match": {
+              "location": "step_definition.TradeJournalSteps.i_am_on_the_trade_journal_log_in_page()"
+            },
             "keyword": "Given "
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 148913400,
+              "status": "passed"
             },
-            "line": 38,
-            "name": "I enter valid username \"halida\" password \"SuperHalida123!\"",
+            "line": 25,
+            "name": "I enter valid username \"Halida\" password \"SuperHalida123!\"",
             "match": {
               "arguments": [
                 {
-                  "val": "\"halida\"",
+                  "val": "\"Halida\"",
                   "offset": 23
                 },
                 {
@@ -43,9 +69,10 @@
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 2166057800,
+              "status": "passed"
             },
-            "line": 39,
+            "line": 26,
             "name": "I click on Trade login button",
             "match": {
               "location": "step_definition.TradeJournalSteps.i_click_on_trade_login_button()"
@@ -54,9 +81,10 @@
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 41067700,
+              "status": "passed"
             },
-            "line": 40,
+            "line": 27,
             "name": "I should be on Trade homepage",
             "match": {
               "location": "step_definition.TradeJournalSteps.i_should_be_on_trade_homepage()"
@@ -65,58 +93,105 @@
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 253761500,
+              "status": "passed"
             },
-            "line": 41,
-            "name": "I click on delete Trade button",
+            "line": 28,
+            "name": "I click on update Trade button",
             "match": {
-              "location": "step_definition.TradeJournalSteps.i_click_on_delete_trade_button()"
+              "location": "step_definition.TradeJournalSteps.i_click_on_update_trade_button()"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 25955500,
+              "status": "passed"
             },
-            "line": 42,
-            "name": "a alert message \"Are you sure you want to delete this record?\" will appear",
+            "line": 29,
+            "name": "I should be on Save Trade page",
             "match": {
-              "arguments": [
-                {
-                  "val": "\"Are you sure you want to delete this record?\"",
-                  "offset": 16
-                }
-              ],
-              "location": "step_definition.TradeJournalSteps.a_alert_message_will_appear(java.lang.String)"
+              "location": "step_definition.TradeJournalSteps.i_should_be_on_save_trade_page()"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 63830500,
+              "status": "passed"
             },
-            "line": 43,
-            "name": "I click on \"OK\" button",
+            "line": 30,
+            "name": "I select symbol \"United\"",
             "match": {
               "arguments": [
                 {
-                  "val": "\"OK\"",
-                  "offset": 11
+                  "val": "\"United\"",
+                  "offset": 16
                 }
               ],
-              "location": "step_definition.TradeJournalSteps.i_click_on_button(java.lang.String)"
+              "location": "step_definition.TradeJournalSteps.i_select_symbol(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 454365400,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "I select \"Buy to Open\" and I enter symbol \"ABC\" entryDate \"04/04/2021\" entryPrice \"10.0\" exitDate \"01/11/2022\" exitPrice \"18\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Buy to Open\"",
+                  "offset": 9
+                },
+                {
+                  "val": "\"ABC\"",
+                  "offset": 42
+                },
+                {
+                  "val": "\"04/04/2021\"",
+                  "offset": 58
+                },
+                {
+                  "val": "\"10.0\"",
+                  "offset": 82
+                },
+                {
+                  "val": "\"01/11/2022\"",
+                  "offset": 98
+                },
+                {
+                  "val": "\"18\"",
+                  "offset": 121
+                }
+              ],
+              "location": "step_definition.TradeJournalSteps.i_select_and_i_enter_symbol_entry_date_entry_price_exit_date_exit_price(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 997300,
-              "status": "skipped"
+              "duration": 684490900,
+              "status": "passed"
             },
-            "line": 44,
-            "name": "The Trade will disappear from the trade table",
+            "line": 32,
+            "name": "I click Save button",
             "match": {
-              "location": "step_definition.TradeJournalSteps.the_trade_will_disappear_from_the_trade_table()"
+              "location": "step_definition.TradeJournalSteps.i_click_save_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 964247200,
+              "status": "passed"
+            },
+            "line": 33,
+            "name": "The trade is displayed on the trade table",
+            "match": {
+              "location": "step_definition.TradeJournalSteps.the_trade_is_displayed_on_the_trade_table()"
             },
             "keyword": "Then "
           }
@@ -126,7 +201,7 @@
             "name": "@tag"
           },
           {
-            "name": "@TradeJournalDelete"
+            "name": "@TradeJournalUpdate"
           }
         ]
       }

@@ -55,15 +55,7 @@ public class Driver {
 			case "sauceLabs":
 				sauceConfig();
 				break;				
-			case "chrome-headless":
-			default:
-				ChromeDriverManager.chromedriver().setup();
-				ChromeOptions opts = new ChromeOptions();
-				opts.addArguments("--headless");
-				opts.addArguments("--disable-gpu");
-				opts.addArguments("--no-sandbox");
-				opts.addArguments("--window-size=1920,1080");
-				driver = new ChromeDriver(opts);
+		
 			}
 		}
 		return driver;

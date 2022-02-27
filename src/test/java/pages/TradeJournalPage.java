@@ -24,9 +24,8 @@ public class TradeJournalPage {
 	@FindBy (css =".btn-primary")
 	public WebElement signInBtn;
 	
-	@FindBy (xpath="//img[contains(@src,'.png')]")
-	public WebElement  tradeIconImage;
-	public WebElement  addTradeBtn;
+	@FindBy (xpath = "//a[@href='/records/showFormForAdd']")
+	public WebElement addTradeBtn;
 	
 	@FindBy (xpath="//div[@class='alert alert-danger']")
 	public WebElement errorMessage;
@@ -72,7 +71,7 @@ public class TradeJournalPage {
 	@FindBy (xpath = "//a[contains(text(), 'Delete')]")
 	public WebElement deleteBtn;
 	
-	@FindBy (xpath="//a[@onclick='return(confirm('Are you sure you want to delete this record?'))']")
+	@FindBy (xpath = "//a[@linkText='Are you sure you want to delete this record?']")
 	public WebElement alertMessage;
 	public WebElement confirmbtn;
 	

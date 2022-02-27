@@ -22,20 +22,20 @@ Feature: As a user I am able to perform update a trade, delete a trade and save 
   @TradeJournalUpdate
   Scenario: As a user, I want to update a trade
     Given I am on the Trade Journal log in page
-    When I enter valid username "halida" password "SuperHalida123!"
+    When I enter valid username "Halida" password "SuperHalida123!"
     And I click on Trade login button
     Then I should be on Trade homepage
     When I click on update Trade button
     Then I should be on Save Trade page
     When I select symbol "United"
-    And I enter symbol "ABC" and select entryDate "04/04/2021" entryPrice "10.0" exitDate "01/11/2022" exitPrice "18"
+    And I select "Buy to Open" and I enter symbol "ABC" entryDate "04/04/2021" entryPrice "10.0" exitDate "01/11/2022" exitPrice "18"
     And I click Save button
     Then The trade is displayed on the trade table
 
   @TradeJournalDelete
   Scenario: As a user, I want to delete a trade.
     Given I am on the Trade Journal log in page
-    When I enter valid username "halida" password "SuperHalida123!"
+    When I enter valid username "Halida" password "SuperHalida123!"
     And I click on Trade login button
     Then I should be on Trade homepage
     When I click on delete Trade button
