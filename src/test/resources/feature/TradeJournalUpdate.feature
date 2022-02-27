@@ -19,7 +19,7 @@
 @tag
 Feature: As a user I am able to perform update a trade, delete a trade and save a trade functionalities.
 
-  @TradeJournalUpdate
+  @TradeJournalUpdate @SmokeTest @Regression
   Scenario: As a user, I want to update a trade
     Given I am on the Trade Journal log in page
     When I enter valid username "Halida" password "SuperHalida123!"
@@ -32,7 +32,7 @@ Feature: As a user I am able to perform update a trade, delete a trade and save 
     And I click Save button
     Then The trade is displayed on the trade table
 
-  @TradeJournalDelete
+  @TradeJournalDelete @SmokeTest @Regression
   Scenario: As a user, I want to delete a trade.
     Given I am on the Trade Journal log in page
     When I enter valid username "Halida" password "SuperHalida123!"
