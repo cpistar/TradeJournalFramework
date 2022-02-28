@@ -1,0 +1,225 @@
+[
+  {
+    "line": 20,
+    "elements": [
+      {
+        "start_timestamp": "2022-02-27T09:39:23.952Z",
+        "before": [
+          {
+            "result": {
+              "duration": 2074842700,
+              "status": "passed"
+            },
+            "match": {
+              "location": "step_definition.Hook.setup()"
+            }
+          }
+        ],
+        "line": 23,
+        "name": "As a user, I want to update a trade",
+        "description": "",
+        "id": "as-a-user-i-am-able-to-perform-update-a-trade--delete-a-trade-and-save-a-trade-functionalities.;as-a-user--i-want-to-update-a-trade",
+        "after": [
+          {
+            "result": {
+              "duration": 210232200,
+              "status": "passed"
+            },
+            "match": {
+              "location": "step_definition.Hook.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1437247800,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "I am on the Trade Journal log in page",
+            "match": {
+              "location": "step_definition.TradeJournalSteps.i_am_on_the_trade_journal_log_in_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 148913400,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "I enter valid username \"Halida\" password \"SuperHalida123!\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Halida\"",
+                  "offset": 23
+                },
+                {
+                  "val": "\"SuperHalida123!\"",
+                  "offset": 41
+                }
+              ],
+              "location": "step_definition.TradeJournalSteps.i_enter_valid_username_password(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2166057800,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "I click on Trade login button",
+            "match": {
+              "location": "step_definition.TradeJournalSteps.i_click_on_trade_login_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 41067700,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "I should be on Trade homepage",
+            "match": {
+              "location": "step_definition.TradeJournalSteps.i_should_be_on_trade_homepage()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 253761500,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "I click on update Trade button",
+            "match": {
+              "location": "step_definition.TradeJournalSteps.i_click_on_update_trade_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 25955500,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "I should be on Save Trade page",
+            "match": {
+              "location": "step_definition.TradeJournalSteps.i_should_be_on_save_trade_page()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 63830500,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "I select symbol \"United\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"United\"",
+                  "offset": 16
+                }
+              ],
+              "location": "step_definition.TradeJournalSteps.i_select_symbol(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 454365400,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "I select \"Buy to Open\" and I enter symbol \"ABC\" entryDate \"04/04/2021\" entryPrice \"10.0\" exitDate \"01/11/2022\" exitPrice \"18\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Buy to Open\"",
+                  "offset": 9
+                },
+                {
+                  "val": "\"ABC\"",
+                  "offset": 42
+                },
+                {
+                  "val": "\"04/04/2021\"",
+                  "offset": 58
+                },
+                {
+                  "val": "\"10.0\"",
+                  "offset": 82
+                },
+                {
+                  "val": "\"01/11/2022\"",
+                  "offset": 98
+                },
+                {
+                  "val": "\"18\"",
+                  "offset": 121
+                }
+              ],
+              "location": "step_definition.TradeJournalSteps.i_select_and_i_enter_symbol_entry_date_entry_price_exit_date_exit_price(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 684490900,
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "I click Save button",
+            "match": {
+              "location": "step_definition.TradeJournalSteps.i_click_save_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 964247200,
+              "status": "passed"
+            },
+            "line": 33,
+            "name": "The trade is displayed on the trade table",
+            "match": {
+              "location": "step_definition.TradeJournalSteps.the_trade_is_displayed_on_the_trade_table()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@tag"
+          },
+          {
+            "name": "@TradeJournalUpdate"
+          }
+        ]
+      }
+    ],
+    "name": "As a user I am able to perform update a trade, delete a trade and save a trade functionalities.",
+    "description": "",
+    "id": "as-a-user-i-am-able-to-perform-update-a-trade--delete-a-trade-and-save-a-trade-functionalities.",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/feature/TradeJournalUpdate.feature",
+    "tags": [
+      {
+        "name": "@tag",
+        "type": "Tag",
+        "location": {
+          "line": 19,
+          "column": 1
+        }
+      }
+    ]
+  }
+]

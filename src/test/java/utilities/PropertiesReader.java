@@ -5,13 +5,15 @@ import java.io.FileInputStream;
 import java.util.Properties;
 
 public class PropertiesReader {
+
+	
 	private static Properties config;
 
 	static {
+
 		try {
 			File file = new File("./src/test/resources/test_data/env.properties");
 			FileInputStream input = new FileInputStream(file);
-
 			config = new Properties();
 			config.load(input);
 			input.close();
@@ -22,8 +24,5 @@ public class PropertiesReader {
 
 	public static String getProperty(String key) {
 		return config.getProperty(key);
-	
 	}
-
 }
-

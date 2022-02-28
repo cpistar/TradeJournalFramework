@@ -5,7 +5,7 @@ Feature: Trade Journal Login and Logout
 
 
 
- @TradeJournalLogin @SmokeTests
+ @TradeJournalLogin @SmokeTests @Regression
   Scenario: User should be directed to the Home page of the Stock Trade Tracking application
     Given I am an external user on the login page of the trade application
     And I enter a valid username "Cana" and password "SuperCana123!"
@@ -13,7 +13,7 @@ Feature: Trade Journal Login and Logout
     Then I should be directed to the Home page of the Stock Trade Tracking application.
 
 
-  @TradeJournalInvalidLogin @SmokeTests
+  @TradeJournalInvalidLogin @SmokeTests @Regression
   Scenario Outline: User should not be able to login to trade account
    Given I am on the login page of the trade application
     When I enter an invalid username "canna" and invalid password  "password_invalid"
@@ -22,7 +22,7 @@ Feature: Trade Journal Login and Logout
 
 
 
-  @TradeJournalLogout @SmokeTests
+  @TradeJournalLogout @SmokeTests @Regression
   Scenario: User should be able to logout successfully
   	Given I am logged in succesfully with username "Cana" and password "SuperCana123!"
   	And I am on the homepage
@@ -32,7 +32,7 @@ Feature: Trade Journal Login and Logout
     Then I should be directed to the LOGIN page with the following message: "You have been signed out"
     
     
-  @TradeJournalSearch @SmokeTests
+  @TradeJournalSearch @SmokeTests @Regression
   Scenario Outline: User should be able to search by date and/or symbol
   	Given I am logged in using username "Cana" and password "SuperCana123!"
     And I am on the Home Page
